@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 6b8c79e. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 78a2b98. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
 
 ## Reproduction
 

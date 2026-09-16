@@ -8,7 +8,7 @@ The searchable inventory references current implementation files and separately 
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review refreshed 2026-09-16 through Capsule OS commit 6b8c79e. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
+Review refreshed 2026-09-16 through Capsule OS commit 78a2b98. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
 
 ## S1 — Purpose and appearance
 
@@ -23,7 +23,7 @@ The optional concept lab is an editorial web illustration, not a native screensh
 ## S10 — Material Studio and semantic icons
 
 - panel/src/capsule-settings.c: the current Material Studio page and system-wide material-world application logic.
-- shared/iconprofile.c and shared/fileglyph.c: atomic profile persistence, semantic type selection, deterministic Cairo rendering, state treatment and universal fallback.
+- shared/iconprofile.c, shared/fileglyph.c and shared/nativeicon.c: atomic profile persistence, semantic type selection, deterministic Cairo rendering, state treatment, universal fallback and material plates that preserve supplied application artwork.
 - tools/check-icon-system.c: profile round-trip, semantic mapping, bounded format label and rendered-pixel checks.
 
 The capture demonstrates the native page. It does not establish that every third-party application supplies useful icon metadata or that every surface in the OS already uses the new renderer.
