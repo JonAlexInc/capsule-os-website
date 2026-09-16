@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 78a2b98. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 813b13a. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
 
 ## Reproduction
 
@@ -45,7 +45,7 @@ Source: panel/src/capsule-player.c · panel/src/capsule-media-worker.c.
 
 Fixture: Headless render; no media file is included or played.
 
-- [Media Surface](assets/native/media-surface.png) — SHA-256 7310091e016911dc0344f0eba88065fcadd10500b3d9ad4bd4cf4ea9ac3be885
+- [Media Surface](assets/native/media-surface.png) — SHA-256 2aff66eafb0286d1347fa7f3a9796aee610dbac9ed934416fa9156ac2d19a29d
 
 ### Wallpaper
 

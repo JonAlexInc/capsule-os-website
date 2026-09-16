@@ -8,7 +8,7 @@ The searchable inventory references current implementation files and separately 
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review refreshed 2026-09-16 through Capsule OS commit 78a2b98. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
+Review refreshed 2026-09-16 through Capsule OS commit 813b13a. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
 
 ## S1 — Purpose and appearance
 
