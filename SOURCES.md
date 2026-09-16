@@ -1,14 +1,14 @@
 # Capsule OS website: evidence and provenance
 
-## Expanded native gallery — revision 3
+## Expanded native gallery — revision 4
 
-The primary depiction now includes 31 native renders of actual application drawing functions across 18 surfaces. See [NATIVE-CAPTURES.md](NATIVE-CAPTURES.md) for exact capture provenance, fixtures, source fingerprints, image hashes, 25 extracted Settings pages, and 14 runtime definitions. The three original browser exercises now live in an optional collapsed concept lab. Their visual simplifications are not the OS depiction.
+The primary depiction now includes 32 native renders of actual application drawing functions across 19 surfaces. See [NATIVE-CAPTURES.md](NATIVE-CAPTURES.md) for exact capture provenance, fixtures, source fingerprints, image hashes, 25 extracted Settings pages, and 14 runtime definitions. The three original browser exercises now live in an optional collapsed concept lab. Their visual simplifications are not the OS depiction.
 
 The searchable inventory references current implementation files and separately labels design/settings-organization.md and design/settings-catalog.json as proposed work. Neither document is used to claim that its target applets are already shipped. Native captures may contain third-party example names from existing harness data, not included software, game artwork, endorsement, or compatibility results. Files displays the fixture documents and the build environment's mount labels; it is not a screenshot of an installed OS's disks.
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review refreshed 2026-09-16 through Capsule OS commit 813b13a. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
+Review refreshed 2026-09-16 through Capsule OS commit 9bc2fd1. The original gallery remains the documented September 9 snapshot; Material Studio, the shell layout editor and Media Surface are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
 
 ## S1 — Purpose and appearance
 
@@ -26,7 +26,16 @@ The optional concept lab is an editorial web illustration, not a native screensh
 - shared/iconprofile.c, shared/fileglyph.c and shared/nativeicon.c: atomic profile persistence, semantic type selection, deterministic Cairo rendering, state treatment, universal fallback and material plates that preserve supplied application artwork.
 - tools/check-icon-system.c: profile round-trip, semantic mapping, bounded format label and rendered-pixel checks.
 
-The capture demonstrates the native page. It does not establish that every third-party application supplies useful icon metadata or that every surface in the OS already uses the new renderer.
+The capture demonstrates the native page, including named worlds, persistent A/B slots and real global/layout/collection scopes. It does not establish that every third-party application supplies useful icon metadata.
+
+## S12 — Whole-shell layouts and rich Peek
+
+- panel/src/capsule-launcher.c and panel/src/capsule-panel.c: shared edit mode, layout control rail, grid/section editing, cross-surface placements and native shell rendering.
+- tools/capsule-layout: stable named layouts, per-display surfaces, mode associations, atomic apply and Universal Undo.
+- panel/src/capsule-files.c and tools/capsule-peek: held-Space previews for folders, images, PDF pages, Office/OpenDocument text, archives, audio, video, text and code.
+- tools/layout-test.py, tools/check-menu-folders.sh and tools/peek-test.py: persistence, editing and bounded-preview checks.
+
+The shell-layout capture is an offscreen render with an empty fixture. The current powered-off VMware test disk has a direct source patch, but interaction feel and hardware behavior still require guest testing and no new ISO was built for this refresh.
 
 ## S11 — Media Surface boundary
 

@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 813b13a. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed 2026-09-16 from committed Capsule OS source through 9bc2fd1. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
 
 ## Reproduction
 
@@ -26,14 +26,26 @@ Fixture: Carbon Blue, Paper and Stainless theme variants; isolated demonstration
 ### Material Studio
 
 The native Settings page exposes system-wide material worlds, visual
-languages, depth, scope, reduced motion and custom-icon choices. Applying a
-world changes shared theme roles and the semantic icon profile.
+languages, depth, named reusable profiles, persistent A/B comparison and real
+global, layout and collection scopes. Applying a world changes shared theme
+roles and the semantic icon profile.
 
 Source: panel/src/capsule-settings.c · shared/iconprofile.c.
 
-Fixture: Isolated Iridescent Titanium profile; no user settings changed.
+Fixture: Isolated Graphite profile with no saved personal profiles.
 
-- [Material Studio](assets/native/material-studio.png) — SHA-256 0c267471a49bfaac619077dde1086c244b61cfae9e326a2baf28e1dc1c3e8c7f
+- [Material Studio](assets/native/material-studio.png) — SHA-256 598528390f8d8fbb42b64f9e424cc289c9be2360ad05ed5c74c2ad076d28d5a6
+
+### Shell layout editor
+
+The Super Menu's native edit mode exposes a persistent control rail, edge and
+corner sizing, blank-layout creation and whole-shell layout operations.
+
+Source: panel/src/capsule-launcher.c · panel/src/capsule-panel.c · tools/capsule-layout.
+
+Fixture: New blank layout at 1600×1000; no personal pins or applications.
+
+- [Blank layout editor](assets/native/super-menu-layout-editor.png) — SHA-256 a8537b0939865c6c943789cf0c577e724dd0429b2dbc2463f10299ce4e0bc69c
 
 ### Media Surface
 
