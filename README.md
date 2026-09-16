@@ -4,7 +4,7 @@ Public showcase for the Capsule OS project.
 
 Website: https://jonalexinc.github.io/capsule-os-website/
 
-This repository contains only the static website and approved native UI captures. The current source review runs through Capsule OS commit `f80166a`; the newest capture additions and their exact source fingerprints are dated September 16, 2026. Native captures show the real drawing code with documented sample state; they are not a running OS or a compatibility certification.
+This repository contains only the static website and approved native UI captures. The current source review runs through Capsule OS commit `b9f4103`; the newest capture additions and their exact source fingerprints are dated September 16, 2026. Native captures show the real drawing code with documented sample state; they are not a running OS or a compatibility certification.
 
 ## Publishing
 

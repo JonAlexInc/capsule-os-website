@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed 2026-09-16 from committed Capsule OS source through 9bc2fd1. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed 2026-09-16 from committed Capsule OS source through b9f4103. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
 
 ## Reproduction
 
@@ -28,13 +28,16 @@ Fixture: Carbon Blue, Paper and Stainless theme variants; isolated demonstration
 The native Settings page exposes system-wide material worlds, visual
 languages, depth, named reusable profiles, persistent A/B comparison and real
 global, layout and collection scopes. Applying a world changes shared theme
-roles and the semantic icon profile.
+roles and the semantic icon profile. The refreshed page also exposes the
+validated data-only extension-pack host; the fixture contains no installed
+personal pack.
 
-Source: panel/src/capsule-settings.c · shared/iconprofile.c.
+Source: panel/src/capsule-settings.c · shared/iconprofile.c ·
+tools/capsule-icon-packs.
 
 Fixture: Isolated Graphite profile with no saved personal profiles.
 
-- [Material Studio](assets/native/material-studio.png) — SHA-256 598528390f8d8fbb42b64f9e424cc289c9be2360ad05ed5c74c2ad076d28d5a6
+- [Material Studio](assets/native/material-studio.png) — SHA-256 b67efb9b18a69bc21b5107a96426b69f0fcdf1f74aad77fb6c1d63768cf08c6a
 
 ### Shell layout editor
 
@@ -49,15 +52,22 @@ Fixture: New blank layout at 1600×1000; no personal pins or applications.
 
 ### Media Surface
 
-The native controller owns the queue and playback controls while decoding is
-kept in a separate libVLC worker with exact-file grants. The captured queue,
-filenames and playback position are generated demonstration data.
+The native controller owns the ordered queue, playback controls, playback
+rate, markers and A/B repeat while decoding is kept in a separate libVLC
+worker with exact-file grants. Decoded video crosses a bounded shared-memory
+frame exchange and is drawn inside the controller. PiP and fullscreen are
+compositor states. The Settings frame shows the implemented local privacy,
+Guide-foundation and recorder controls. Captured names and positions are
+generated demonstration data.
 
-Source: panel/src/capsule-player.c · panel/src/capsule-media-worker.c.
+Source: panel/src/capsule-player.c · panel/src/capsule-media-worker.c ·
+shared/mediaframe.h · compositor/src/capsule-wm.c ·
+panel/src/capsule-settings.c.
 
 Fixture: Headless render; no media file is included or played.
 
-- [Media Surface](assets/native/media-surface.png) — SHA-256 2aff66eafb0286d1347fa7f3a9796aee610dbac9ed934416fa9156ac2d19a29d
+- [Media Surface](assets/native/media-surface.png) — SHA-256 ae47c4a43921e5b6ac4844965b4ac57fe6ab0feb68fc9266b22b5b29c5cb2522
+- [Media settings](assets/native/media-settings.png) — SHA-256 80fa71d5393e9d1b24684bc1473510349b3a35d232e2b4b33a4cdb32753cd249
 
 ### Wallpaper
 
@@ -223,20 +233,20 @@ Fixture: Report landing page only; no system report collected.
 
 These fingerprints identify source files inspected after capture. They do not assert a reproducible binary build or an immutable whole-tree revision.
 
-- shared/theme.c: d2baebec26f28f46a147388c5340887ea493ae50eb2e47c093a07705b97877ea
+- shared/theme.c: 866fed1ae409d3803a498bf49ab7f20b8cb3cd2c5c4de7f733233b7fef803416
 - shared/wallpaper-scenes.c: 54628efe3e6c7ce3e748ab98c51812c7fb1483162ec5fbb179966fff041ec53f
-- panel/src/capsule-settings.c: 438c1f47105c3844dcd2a17afcb9f4129c43ab0e724c6dbd3e365778a10d1172
-- panel/src/capsule-panel.c: f8913f5896dba8de3005ba25ba2aee5ab1a5ef431a4bfd4e8d094c480e413980
-- panel/src/capsule-library.c: 429337b900d9af7a8a8019e9645682dd3dc95277cc9e82023cd9ea5e06b4087c
-- panel/src/library-home-ui.h: 645e37d4acbeb0fc69ba9fd42006794cbc6874e01fae07d998e83f14b291a39a
-- panel/src/capsule-capper.c: 81d292e1d22777eec1f52bca815f6d47ca81a1f9b0b8279ec9b0367cb69beb5c
-- panel/src/capsule-files.c: ac52b4984c1ed871c3a937d9e620abced7d8b572c2db1476552c1b358053780d
+- panel/src/capsule-settings.c: ce53e9c7cc088fc63bf7eda34a222860ed89269a10e9b23077b573bf9bb3266f
+- panel/src/capsule-panel.c: d6eafc364a43992536d2e6b8f9d53cc5dea52de27551690e8027bd992cf9d34e
+- panel/src/capsule-library.c: 5d3415a65053265dccbd8d28f9e5731438e7e9f955fa65f1e8f7e1c579bbdfa9
+- panel/src/library-home-ui.h: 1c3f9f4da53de3b47a6356a7b9efea50c3dd68d09f8b92e0077777c6d2ddf171
+- panel/src/capsule-capper.c: bb33e43da0fb0ef124ff7daa4af5a600c10b0569db538a74c70898baea81ac92
+- panel/src/capsule-files.c: 515ae6875be07126a82ef3a8751bb9052eb66476aaaf6cf1f4a210a6da3603dc
 - panel/src/capsule-sound.c: 02c7cdf7d26600f6ebb3df40f2978d9340d483b1a47135c0dac85a75e2d642a2
 - panel/src/capsule-network.c: a32b788f88ef2cb9baee3c6ddcbc90ee53b7e72f5a818223f549d8f9bfca1ff5
 - panel/src/capsule-install.c: 6c2384071d9f191f18a9a3275e6f424078776e764401ed5f759758241679d7fa
-- panel/src/capsule-permissions.c: 1e0acd4c3bb10c04658c27893bedc3b7b9bff4f9141104b011e6766776a76949
-- panel/src/capsule-logs.c: 00b3fe78495060d59bbaebf72de1de3f9025e91649f099356d3a29fae92a7c82
-- design/settings-organization.md: d27ee07f6016172067c95880e2aae3806bc76651b41dc9bba1dd742336e5bd48
+- panel/src/capsule-permissions.c: 8e6e8e09963468caceab34113b2ed529741f50b635d2188505a72475efeff587
+- panel/src/capsule-logs.c: fcdf101426ae5a71de09a41e3fb35120312a9f3f4ec82ef53f9fa8e9ceeec097
+- design/settings-organization.md: 88fa8165f98d0217059639a60e5a158bfea6625bb39a1d43dbb2027706f28983
 
 ## Rights and accuracy
 
