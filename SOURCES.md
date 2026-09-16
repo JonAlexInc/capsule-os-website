@@ -8,7 +8,7 @@ The searchable inventory references current implementation files and separately 
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review refreshed 2026-09-16 through Capsule OS commit 9bc2fd1. The original gallery remains the documented September 9 snapshot; Material Studio, the shell layout editor and Media Surface are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
+Review refreshed 2026-09-16 through Capsule OS commit f80166a. The original gallery remains the documented September 9 snapshot; Material Studio, the shell layout editor and Media Surface are later, separately identified additions whose capture provenance remains recorded in NATIVE-CAPTURES.md. The refreshed source passed 93 host integration checks with zero failures; five checks remained explicitly skipped or incomplete because their required environment was unavailable. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
 
 ## S1 — Purpose and appearance
 
@@ -35,7 +35,7 @@ The capture demonstrates the native page, including named worlds, persistent A/B
 - panel/src/capsule-files.c and tools/capsule-peek: held-Space previews for folders, images, PDF pages, Office/OpenDocument text, archives, audio, video, text and code.
 - tools/layout-test.py, tools/check-menu-folders.sh and tools/peek-test.py: persistence, editing and bounded-preview checks.
 
-The shell-layout capture is an offscreen render with an empty fixture. The current powered-off VMware test disk has a direct source patch, but interaction feel and hardware behavior still require guest testing and no new ISO was built for this refresh.
+The shell-layout capture is an offscreen render with an empty fixture. The powered-off VMware test disk was directly patched from f80166a on 2026-09-16; its on-disk manifest records 32 panel binaries, the icon registry, Media Surface, and the persistent-upper libVLC bridge. Interaction feel and hardware behavior still require guest testing and no new ISO was built for this refresh.
 
 ## S11 — Media Surface boundary
 
