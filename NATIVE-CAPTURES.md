@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Generated 2026-09-09 from the working tree based on HEAD 70085c4 with local modifications. These are fresh output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio and Media Surface were added 2026-09-16 from committed Capsule OS source through 6b8c79e. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
 
 ## Reproduction
 
@@ -22,6 +22,30 @@ Fixture: Carbon Blue, Paper and Stainless theme variants; isolated demonstration
 - [Paper](assets/native/appearance-paper.png) — SHA-256 134fec88b2fded7197b8cda4d0b6ad271fcc800403452a0cc048524ece556125
 - [Stainless / Chrome](assets/native/appearance-metal.png) — SHA-256 902ff30a1e6ec4f4b26c4572ae0c1a89e30401edab50051f6be0f3eff406f863
 - [Material controls](assets/native/appearance-materials.png) — SHA-256 725dab7248effaa4ba3c0d551780c71b3be2f5c5b500e00244eaaeb18f8ce238
+
+### Material Studio
+
+The native Settings page exposes system-wide material worlds, visual
+languages, depth, scope, reduced motion and custom-icon choices. Applying a
+world changes shared theme roles and the semantic icon profile.
+
+Source: panel/src/capsule-settings.c · shared/iconprofile.c.
+
+Fixture: Isolated Iridescent Titanium profile; no user settings changed.
+
+- [Material Studio](assets/native/material-studio.png) — SHA-256 0c267471a49bfaac619077dde1086c244b61cfae9e326a2baf28e1dc1c3e8c7f
+
+### Media Surface
+
+The native controller owns the queue and playback controls while decoding is
+kept in a separate libVLC worker with exact-file grants. The captured queue,
+filenames and playback position are generated demonstration data.
+
+Source: panel/src/capsule-player.c · panel/src/capsule-media-worker.c.
+
+Fixture: Headless render; no media file is included or played.
+
+- [Media Surface](assets/native/media-surface.png) — SHA-256 7310091e016911dc0344f0eba88065fcadd10500b3d9ad4bd4cf4ea9ac3be885
 
 ### Wallpaper
 

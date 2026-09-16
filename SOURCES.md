@@ -1,14 +1,14 @@
 # Capsule OS website: evidence and provenance
 
-## Expanded native gallery — revision 2
+## Expanded native gallery — revision 3
 
-The primary depiction is now 29 fresh renders of actual application drawing functions across 16 surfaces. See [NATIVE-CAPTURES.md](NATIVE-CAPTURES.md) for exact capture provenance, fixtures, source fingerprints, image hashes, 25 extracted Settings pages, and 14 runtime definitions. The three original browser exercises now live in an optional collapsed concept lab. Their visual simplifications are not the OS depiction.
+The primary depiction now includes 31 native renders of actual application drawing functions across 18 surfaces. See [NATIVE-CAPTURES.md](NATIVE-CAPTURES.md) for exact capture provenance, fixtures, source fingerprints, image hashes, 25 extracted Settings pages, and 14 runtime definitions. The three original browser exercises now live in an optional collapsed concept lab. Their visual simplifications are not the OS depiction.
 
 The searchable inventory references current implementation files and separately labels design/settings-organization.md and design/settings-catalog.json as proposed work. Neither document is used to claim that its target applets are already shipped. Native captures may contain third-party example names from existing harness data, not included software, game artwork, endorsement, or compatibility results. Files displays the fixture documents and the build environment's mount labels; it is not a screenshot of an installed OS's disks.
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review: 2026-09-09. Repository HEAD at review: 70085c4, with existing uncommitted changes. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
+Review refreshed 2026-09-16 through Capsule OS commit 6b8c79e. The original gallery remains the documented September 9 snapshot; the Material Studio and Media Surface captures are later, separately identified additions. Paths below are relative to the capsule-os repository. These are source references, not public repository URLs. The website includes no source-tree browsing endpoint.
 
 ## S1 — Purpose and appearance
 
@@ -19,6 +19,23 @@ Review: 2026-09-09. Repository HEAD at review: 70085c4, with existing uncommitte
 - design/appearance-revamp.md: current appearance work; status statements distinguish isolated tests from image verification.
 
 The optional concept lab is an editorial web illustration, not a native screenshot. Its static sidebar labels are scene context and its dock and tabs are browser controls. The primary gallery instead contains real native-renderer captures, documented in NATIVE-CAPTURES.md. Neither claims that every control is verified in a released image.
+
+## S10 — Material Studio and semantic icons
+
+- panel/src/capsule-settings.c: the current Material Studio page and system-wide material-world application logic.
+- shared/iconprofile.c and shared/fileglyph.c: atomic profile persistence, semantic type selection, deterministic Cairo rendering, state treatment and universal fallback.
+- tools/check-icon-system.c: profile round-trip, semantic mapping, bounded format label and rendered-pixel checks.
+
+The capture demonstrates the native page. It does not establish that every third-party application supplies useful icon metadata or that every surface in the OS already uses the new renderer.
+
+## S11 — Media Surface boundary
+
+- panel/src/capsule-media-worker.c: fixed command grammar, exact canonical file grants and opt-in URL handling around libVLC.
+- panel/src/capsule-player.c: native queue/controller, private runtime state and command socket, headless visual and control tests.
+- panel/src/capsule-panel.c: shared Now Playing control; MPRIS remains the path for Spotify and other compatible players.
+- tools/check-media-worker.py: sibling refusal and chosen-file grant tests.
+
+This is a tested source foundation, not a claim that the complete design brief is shipped. Picture-in-picture video, artwork matching, guide/DVR and other advanced slices remain future work and the latest ISO has not been rebuilt.
 
 ## S2 — Permissions
 
