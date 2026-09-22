@@ -110,7 +110,7 @@ Fixture: Harness-generated folders and files; native wallpaper and menu.
 
 ### Library
 
-Library has category navigation, a controller page and a route back to the desktop. Compare a collection containing one fictional capsule with the empty state and controller controls. The empty state contains a confirmed misleading Install route; see status note 07.
+Library has category navigation, a controller page and a route back to the desktop. Compare a collection containing one fictional capsule with the empty state and controller controls. The current sofa rewrite adds a Coverwall and fullscreen-return route; its Coverwall frame below is a native client capture from a compositor test using invented entries. The empty state contains a confirmed misleading Install route; see status note 07.
 
 Source: panel/src/capsule-library.c · panel/src/library-home-ui.h.
 
@@ -119,6 +119,7 @@ Fixture: Sample Notes is a metadata-only fixture, not a runnable app. The empty-
 - [Sample collection](assets/native/library-sample.png) — SHA-256 975f86bd5b636e2340a09926047bdef4d8385adb091062aac1579e00702d89d7
 - [Empty state](assets/native/library.png) — SHA-256 aa9f61b1f9a8852fc2c560f953dd5ea47f34940cfd659b62ac640d242c136d3f
 - [Controllers & players](assets/native/controllers.png) — SHA-256 ca60f268e17626ef082544d9343e1d49a91ae7eeb5989e2a441d3710784e3898
+- [Coverwall source capture](assets/native/library-coverwall-source.png) — SHA-256 aedb663fe2dcb316fc50c81811469fad60bbcf2b88fb84457d36359afbb1a491. Native client/compositor-test output with fictional entries at 1280×720; it is not a VM guest screenshot, physical-gamepad proof, or compatibility result.
 
 ### Capper
 

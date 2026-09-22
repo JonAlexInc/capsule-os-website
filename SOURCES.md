@@ -87,15 +87,23 @@ The demo contains explicitly fictional local entries and does not execute those 
 
 This detects a defined missing-protocol launch-regression class in the build result. It is not proof that every application launches properly in an injected VM or released ISO.
 
-## S16 — Material World 06 installed-image verification
+## S16 — Material World 07 installed-image verification
 
-- Exact source: `22d7254977f09eb8e341776b31cf7cc4d898fc96`.
-- Installed-image stamp: `20260922-material-world-06`.
-- Read-only verifier: `F:/Development/Capsule OS/.codex-tmp/material-world-06-release/verify.log` recorded `PASS` after matching 126 exact installed files: 32 panel binaries, 2 window-manager binaries, 3 textures, 16 fonts, 4 aquarium assets and 51 icon-system files.
-- The verifier resolved 35 Capsule ELFs against both immutable A/B slots and found all rich-preview helpers present. The installed window-manager binary SHA-256 was `0631514909110116e633a87b6e9f60dc3efdd2c7638a62aba38136a120ba055e`.
-- Final source archive: `capsule-os-22d7254.tar.gz`, SHA-256 `e93fcf4cf0996dc87fc8f3c9f17f64dd37d33a1808322f0d7dac67e3fd45ae17`.
+- Exact source: `293b4a3da537a0b3beae3a501acd1c879cfaf065`.
+- Installed-image stamp: `20260922-material-world-07`.
+- Read-only verifier: `F:/Development/Capsule OS/.codex-tmp/material-world-07-release/verify.log` recorded `PASS` after matching 402 exact installed hashes: 32 panel binaries, 2 window-manager binaries, 3 textures, 16 fonts, 16 aquarium assets, 51 icon-system files, 164 application icon-set files, 27 default-application-artwork files and 75 system-artwork files.
+- The verifier resolved 35 Capsule ELFs against both immutable A/B slots and found all rich-preview helpers present. The installed window-manager binary SHA-256 was `ce106cac479611968ed9bc8d3876e51d7e7e8c09938c5519c1fd5f736470c311`.
+- Final source archive: `capsule-os-293b4a3da537a0b3beae3a501acd1c879cfaf065.tar.gz`, SHA-256 `4d246e87ec35a26c50c11f8f2795fba33507626bddf6ebc9283c0f829d47564a`.
 
-This is a powered-off, read-only installed-image verification. It proves the recorded files, build receipt and A/B loader closure for the stamped image; it does not prove guest-session visual fidelity, pointer feel, hardware behavior, network reachability, or general application compatibility. Current Paper and Jelly images on this site remain deterministic source renders, not guest screenshots. The Aquarium asset inventory is verified as installed data; this does not claim a completed photorealistic interactive aquarium.
+This is a powered-off, read-only installed-image verification. It proves the recorded files, build receipt and A/B loader closure for the stamped image; it does not prove guest-session visual fidelity, pointer feel, hardware behavior, network reachability, or general application compatibility. Current Paper and Jelly images on this site remain deterministic source renders, not guest screenshots. The Aquarium asset inventory is verified as installed data; it does not establish a full 3D simulation or tank-object editor.
+
+## S17 — Current source systems and host gates
+
+- Material construction: shared Paper, Jelly and normal-size Files bounds; material-specific shell construction; user artwork preservation with consistent fallback in the dock and Super Menu.
+- Icon languages: four authored vector families—Pixel, Blueprint, Monogram and Signal—with 40 symbols each, alongside the standard and Photographic languages. Source gates reported 11,400 semantic-language checks passing.
+- Aquarium: 20 independently animated animal entries across 10 habitats with grouped controls. It is a textured 2.5D renderer, not a true 3D aquarium or a full tank editor.
+- Library: Coverwall and fullscreen-return behavior are covered by the native compositor/client tests; the public Coverwall image is a fictional-fixture source capture, not a VM guest frame.
+- Host gates reported 22,872 appearance checks and 33,605 action checks passing. These source/headless totals and compositor-client checks are not substitutes for refreshed VM visual or interaction acceptance.
 
 ## S2 — Permissions
 
