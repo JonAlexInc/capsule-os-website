@@ -87,6 +87,16 @@ The demo contains explicitly fictional local entries and does not execute those 
 
 This detects a defined missing-protocol launch-regression class in the build result. It is not proof that every application launches properly in an injected VM or released ISO.
 
+## S16 — Material World 06 installed-image verification
+
+- Exact source: `22d7254977f09eb8e341776b31cf7cc4d898fc96`.
+- Installed-image stamp: `20260922-material-world-06`.
+- Read-only verifier: `F:/Development/Capsule OS/.codex-tmp/material-world-06-release/verify.log` recorded `PASS` after matching 126 exact installed files: 32 panel binaries, 2 window-manager binaries, 3 textures, 16 fonts, 4 aquarium assets and 51 icon-system files.
+- The verifier resolved 35 Capsule ELFs against both immutable A/B slots and found all rich-preview helpers present. The installed window-manager binary SHA-256 was `0631514909110116e633a87b6e9f60dc3efdd2c7638a62aba38136a120ba055e`.
+- Final source archive: `capsule-os-22d7254.tar.gz`, SHA-256 `e93fcf4cf0996dc87fc8f3c9f17f64dd37d33a1808322f0d7dac67e3fd45ae17`.
+
+This is a powered-off, read-only installed-image verification. It proves the recorded files, build receipt and A/B loader closure for the stamped image; it does not prove guest-session visual fidelity, pointer feel, hardware behavior, network reachability, or general application compatibility. Current Paper and Jelly images on this site remain deterministic source renders, not guest screenshots. The Aquarium asset inventory is verified as installed data; this does not claim a completed photorealistic interactive aquarium.
+
 ## S2 — Permissions
 
 - docs/manual/permissions.md: saved choices are used on the next launch.
