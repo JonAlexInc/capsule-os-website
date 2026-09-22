@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed from later committed Capsule OS source. The additions include the deterministic Material Studio review sheet, file-material sheet and Media Shelf capture from source through `e26b8c4`, the Stainless system bench from `28d0e60`, and the revised shell editor capture from `422901a`. Native frames are output images of actual drawing functions. The review sheet is explicitly mixed evidence: current renders on its left, approved concept art on its right. None is a VM screenshot, a running OS, or a claim that the captured state is present in a published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed from later committed Capsule OS source. The additions include the deterministic Material Studio review sheet, file-material sheet and Media Shelf capture from source through `e26b8c4`, the Stainless system bench from `28d0e60`, the revised shell editor capture from `422901a`, and current Paper/Jelly Material Studio and Files source renders from `5b2cb22`. Native frames are output images of actual drawing functions. The review sheet is explicitly mixed evidence: current renders on its left, approved concept art on its right. None is a VM screenshot, a running OS, or a claim that the captured state is present in a published ISO.
 
 ## Reproduction
 
@@ -40,6 +40,8 @@ Fixture: Isolated Graphite profile with no saved personal profiles.
 - [Stainless system bench](assets/native/material-studio-stainless.png) — SHA-256 7903e1255bd91c4f8873e92b394a1cd3a4f139752eccf02cbdc067e0d4a61245
 - [Material Studio](assets/native/material-studio.png) — SHA-256 b67efb9b18a69bc21b5107a96426b69f0fcdf1f74aad77fb6c1d63768cf08c6a
 - [Current render / approved concept review](assets/evidence/material-world-review.png) — SHA-256 f0cd2b0a9b9f9e2e943b2b6f8c30edfce74fc434180d2bc77c2e609e616be54c. The left column is current deterministic output for Paper, Stainless, Jelly Resin and CRT; the right column is labeled art direction and is not a native capture.
+- [Paper source render](assets/native/material-studio-paper-current.png) — SHA-256 24d9693dd67fbc8d31c95392082c1effe359a70a60d2870f36266e4a629bf7d8. Current deterministic Settings capture at 1400×930; it shows source-rendered Paper material behavior, not guest-session fidelity.
+- [Jelly source render](assets/native/material-studio-jelly-current.png) — SHA-256 39d17c72d96278cb918e8d1734ab8154cfb204739099adcb03f09eae32744ffd. Current deterministic Settings capture at 1400×930; it is not a VM screenshot.
 
 ### Shell layout editor
 
@@ -174,7 +176,7 @@ Fixture: Isolated home in WSL; Storage lists the build environment’s virtual d
 
 ### Files
 
-Places and capsule storage share a sidebar. Grid and details views show the same fictional documents. The source also includes multi-selection, drag-and-drop, Trash, network locations and contextual file actions.
+Places and capsule storage share a sidebar. Grid and details views show the same fictional documents. The new Paper and Jelly frames use the optional 140px icon presentation, ten synthetic entries and current physical-material render paths. The source also includes multi-selection, drag-and-drop, Trash, network locations and contextual file actions.
 
 Source: panel/src/capsule-files.c.
 
@@ -183,6 +185,8 @@ Fixture: Three authored demonstration documents and two empty folders in a priva
 - [Grid view](assets/native/files.png) — SHA-256 00a2f36dda2281729e3638a43ab7e5e8f428cf52e83a1eb4bac4f5c932ecc480
 - [Details view](assets/native/files-details.png) — SHA-256 fee0e932d9793b640224739fcdb3d515691ffc40cb9b52e6519892ed4cb1f784
 - [Material file cards and 12/32-item Super Folders](assets/native/file-materials.png) — SHA-256 ac325bcb024d63246fab74943c19317b12390c455f9d76ce19adc3a9cabfe6c7
+- [Paper at optional 140px](assets/native/files-paper-current-zoom140.png) — SHA-256 71ddd2bb91d7dbf4697446d67eb2ab88fcf8a1da915cf704e3ad35fcba564ccf. Current deterministic source render at 1400×930; no personal files, running guest, or visual-fidelity approval is implied.
+- [Jelly at optional 140px](assets/native/files-jelly-current-zoom140.png) — SHA-256 a8144698c1bc806c5a33282dedc404862207afce3c1ca82414cdcd90330663d4. Current deterministic source render at 1400×930; no personal files or VM-session claim is implied.
 
 ### Sound
 

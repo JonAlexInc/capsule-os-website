@@ -8,7 +8,7 @@ The searchable inventory references current implementation files and separately 
 
 S9: the newly documented Library empty-state issue is visible in the native render and confirmed in panel/src/capsule-library.c. The text says that Install adds an application, while the HIT_INSTALL helper launches capsule-install. This website work documents the discrepancy and does not change the OS.
 
-Review refreshed 2026-09-16 from the current source and deterministic capture harnesses. The last fully audited powered-off-VM patch remains `b9f4103a350da92284ed20d7effd73e780e94463`; newer Material Studio, identity, Media Shelf and exact-inventory work is separately identified below and must not be mistaken for a released ISO. The original gallery remains the documented September 9 snapshot; newer surfaces have their own capture records. Paths below are relative to the capsule-os repository, and selected behavior changes link to the exact public commit that introduced them.
+Review refreshed 2026-09-22 from the current source and deterministic capture harnesses. The last fully audited powered-off-VM patch remains `b9f4103a350da92284ed20d7effd73e780e94463`; newer Material Studio, identity, Media Shelf, Library and exact-inventory work is separately identified below and must not be mistaken for a released ISO. The original gallery remains the documented September 9 snapshot; newer surfaces have their own capture records. Paths below are relative to the capsule-os repository, and selected behavior changes link to the exact public commit that introduced them.
 
 ## S1 — Purpose and appearance
 
@@ -30,8 +30,11 @@ The optional concept lab is an editorial web illustration, not a native screensh
 - [commit `45591ae`](https://github.com/JonAlexInc/capsule-os/commit/45591ae): shared five-level depth, accessibility treatment and material application across native surfaces.
 - [commit `28d0e60`](https://github.com/JonAlexInc/capsule-os/commit/28d0e60): shared studio lighting carried through native chrome, cards and fields in metal worlds, with the deterministic Material Studio gate passing.
 - [commit `a54a24b`](https://github.com/JonAlexInc/capsule-os/commit/a54a24b): CRT phosphor effects bounded to faceplates rather than reading surfaces.
+- [commit `35ed04c`](https://github.com/JonAlexInc/capsule-os/commit/35ed04c): physical Paper, Cerakote and Jelly object rendering, sampled Paper stock, and independent shell-construction controls.
+- [commit `919b595`](https://github.com/JonAlexInc/capsule-os/commit/919b595): Paper-stock contrast and surface-shape support.
+- [commit `5b2cb22`](https://github.com/JonAlexInc/capsule-os/commit/5b2cb22): current Paper/Jelly Material Studio and Files source renders, plus Files preview-text sizing.
 
-The gallery includes the current Material Studio page, a deterministic file-card/Super Folder sheet and a review sheet that labels current source renders on the left and approved concept references on the right. It demonstrates named worlds, persistent A/B slots, five depth levels, real global/layout/collection scopes and the extension-pack surface. It does not establish that every third-party application supplies useful icon metadata, and the approved concepts are not presented as running screenshots.
+The gallery includes the current Material Studio page, Paper/Jelly Settings and Files source renders, a deterministic file-card/Super Folder sheet and a review sheet that labels current source renders on the left and approved concept references on the right. It demonstrates named worlds, persistent A/B slots, five depth levels, real global/layout/collection scopes and the extension-pack surface. Paper uses sampled cotton stock for fiber and letterpress treatment; the material profile also selects dock, top-bar and Super Menu construction independently, with Cerakote choosing chamfered shells and a segmented dock. It does not establish that every third-party application supplies useful icon metadata, that approved concepts are pixel-matched, or that any render is a running screenshot.
 
 ## S12 — Whole-shell layouts and rich Peek
 
@@ -67,6 +70,22 @@ The current native Shelf capture is deterministic fixture data: invented titles,
 - [commit `e26b8c4`](https://github.com/JonAlexInc/capsule-os/commit/e26b8c4): exact VM injection inventory coverage, including the SMB helper.
 
 SMB, SSH/SFTP and FTP are user-space mappings under `~/Network`; credentials are offered to the keyring only after a successful connection. NFS and WebDAV remain explicitly declined in this build. This evidence proves the shipped implementation and build guard, not reachability or credentials for a particular server.
+
+## S14 — Library sofa route
+
+- `panel/src/library-sofa.h` and `panel/src/capsule-library.c`: controller-first Tonight, Collection, Systems, Shortlist, search, atlas, details and option routes in the native Library executable.
+- `tools/library-sofa-test.py`, `tools/library-sofa-live-test.py` and `tools/library-home-test.py`: source and live-client checks for catalogue bounds, selection, search, persistence, input, controller navigation and demo isolation.
+- [commit `0462fd7`](https://github.com/JonAlexInc/capsule-os/commit/0462fd7): native controller-first sofa rewrite.
+
+The demo contains explicitly fictional local entries and does not execute those IDs. The current public gallery frames predate the sofa rewrite; no matching VM screenshot, deployed-build receipt, physical-gamepad result, emulator gameplay result, or general compatibility claim is made here.
+
+## S15 — Launch-protocol build gate
+
+- `tools/build-wm.sh` runs `tools/wayland-launch-protocol-test.py` before emitting a compositor build receipt.
+- `tools/wm-source-digest.sh` includes that gate in the compositor source digest.
+- [commit `eaaab20`](https://github.com/JonAlexInc/capsule-os/commit/eaaab20): build-receipt requirement for required Wayland registries and a subsurface path.
+
+This detects a defined missing-protocol launch-regression class in the build result. It is not proof that every application launches properly in an injected VM or released ISO.
 
 ## S2 — Permissions
 
