@@ -4,7 +4,7 @@ Public showcase for the Capsule OS project.
 
 Website: https://jonalexinc.github.io/capsule-os-website/
 
-This repository contains only the static website and approved native UI captures. The current source review runs through Capsule OS commit `b9f4103`; the newest capture additions and their exact source fingerprints are dated September 16, 2026. Native captures show the real drawing code with documented sample state; they are not a running OS or a compatibility certification.
+This repository contains only the static website, deterministic native UI captures and a labeled material review sheet. The current Material Studio evidence runs through Capsule OS commit `28d0e60`; shell interaction source through `422901a`; exact VM inventory evidence through `e26b8c4`; and the last complete powered-off-VM audit remains separately identified as `b9f4103`. Native captures show real drawing code with documented sample state. Approved concept art appears only where it is visibly labeled as art direction, never as a running screenshot. None of these images is a compatibility certification or a released ISO.
 
 ## Publishing
 

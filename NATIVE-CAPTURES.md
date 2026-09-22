@@ -1,6 +1,6 @@
 # Native Capsule OS capture record
 
-Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed 2026-09-16 from committed Capsule OS source through b9f4103. These are output images of actual native render functions. They are not VM screenshots, a running OS, or a claim that the captured state is present in the published ISO.
+Originally generated 2026-09-09 from the working tree based on HEAD 70085c4. Material Studio, the shell layout editor and Media Surface were refreshed from later committed Capsule OS source. The additions include the deterministic Material Studio review sheet, file-material sheet and Media Shelf capture from source through `e26b8c4`, the Stainless system bench from `28d0e60`, and the revised shell editor capture from `422901a`. Native frames are output images of actual drawing functions. The review sheet is explicitly mixed evidence: current renders on its left, approved concept art on its right. None is a VM screenshot, a running OS, or a claim that the captured state is present in a published ISO.
 
 ## Reproduction
 
@@ -37,18 +37,23 @@ tools/capsule-icon-packs.
 
 Fixture: Isolated Graphite profile with no saved personal profiles.
 
+- [Stainless system bench](assets/native/material-studio-stainless.png) — SHA-256 7903e1255bd91c4f8873e92b394a1cd3a4f139752eccf02cbdc067e0d4a61245
 - [Material Studio](assets/native/material-studio.png) — SHA-256 b67efb9b18a69bc21b5107a96426b69f0fcdf1f74aad77fb6c1d63768cf08c6a
+- [Current render / approved concept review](assets/evidence/material-world-review.png) — SHA-256 f0cd2b0a9b9f9e2e943b2b6f8c30edfce74fc434180d2bc77c2e609e616be54c. The left column is current deterministic output for Paper, Stainless, Jelly Resin and CRT; the right column is labeled art direction and is not a native capture.
 
 ### Shell layout editor
 
 The Super Menu's native edit mode exposes a persistent control rail, edge and
-corner sizing, blank-layout creation and whole-shell layout operations.
+corner sizing, blank-layout creation and whole-shell layout operations. This
+refreshed blank-layout render shows adjacent Save and Done controls. The
+two-dimensional board interaction is source-tested separately; a still image
+cannot demonstrate live card dragging.
 
 Source: panel/src/capsule-launcher.c · panel/src/capsule-panel.c · tools/capsule-layout.
 
-Fixture: New blank layout at 1600×1000; no personal pins or applications.
+Fixture: New blank layout at 1280×800; no personal pins or applications.
 
-- [Blank layout editor](assets/native/super-menu-layout-editor.png) — SHA-256 a8537b0939865c6c943789cf0c577e724dd0429b2dbc2463f10299ce4e0bc69c
+- [Blank layout editor](assets/native/super-menu-layout-editor.png) — SHA-256 e66154117709cc36e41ab404b01e1a849f3637096bb8d23134e6a1cb38cc83f5
 
 ### Media Surface
 
@@ -67,6 +72,7 @@ panel/src/capsule-settings.c.
 Fixture: Headless render; no media file is included or played.
 
 - [Media Surface](assets/native/media-surface.png) — SHA-256 ae47c4a43921e5b6ac4844965b4ac57fe6ab0feb68fc9266b22b5b29c5cb2522
+- [Desktop Media Shelf](assets/native/media-shelf.png) — SHA-256 d464739d42805bcee83f8f1b9ec9ea5a502756ab1811babffe10d6916915f682
 - [Media settings](assets/native/media-settings.png) — SHA-256 80fa71d5393e9d1b24684bc1473510349b3a35d232e2b4b33a4cdb32753cd249
 
 ### Wallpaper
@@ -176,6 +182,7 @@ Fixture: Three authored demonstration documents and two empty folders in a priva
 
 - [Grid view](assets/native/files.png) — SHA-256 00a2f36dda2281729e3638a43ab7e5e8f428cf52e83a1eb4bac4f5c932ecc480
 - [Details view](assets/native/files-details.png) — SHA-256 fee0e932d9793b640224739fcdb3d515691ffc40cb9b52e6519892ed4cb1f784
+- [Material file cards and 12/32-item Super Folders](assets/native/file-materials.png) — SHA-256 ac325bcb024d63246fab74943c19317b12390c455f9d76ce19adc3a9cabfe6c7
 
 ### Sound
 

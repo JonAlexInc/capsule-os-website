@@ -6,6 +6,7 @@ let selectedImage=selectedScreen.variants[0][0];
 const nativeImage=document.querySelector('#native-image');
 function showNative(screen,variant=screen.variants[0][0]){
  selectedScreen=screen;selectedImage=variant;
+ const review=variant.includes('../evidence/');
  document.querySelector('#native-mobile-select').value=screen.id;
  document.querySelectorAll('[data-screen]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.screen===screen.id)));
  document.querySelector('#native-title').textContent=screen.lead;
@@ -14,7 +15,11 @@ function showNative(screen,variant=screen.variants[0][0]){
  document.querySelector('#native-fixture').textContent=screen.fixture;
  document.querySelector('#native-variants').replaceChildren(...screen.variants.map(([id,label])=>{const button=document.createElement('button');button.textContent=label;button.setAttribute('aria-pressed',String(id===variant));button.onclick=()=>showNative(screen,id);return button;}));
  nativeImage.src=`assets/native/${variant}.png`;
- nativeImage.alt=`Capsule OS ${screen.title}: actual native renderer output. ${screen.fixture}`;
+ nativeImage.alt=review
+  ? `Capsule OS ${screen.title}: labeled comparison of deterministic renderer output and approved concept art. ${screen.fixture}`
+  : `Capsule OS ${screen.title}: actual native renderer output. ${screen.fixture}`;
+ document.querySelector('#native-evidence-kind').textContent=review?'LABELED RENDER / CONCEPT REVIEW':'ACTUAL APPLICATION DRAWING';
+ document.querySelector('#native-evidence-note').textContent=review?'current source at left · art direction at right':'deterministic native source capture';
  document.querySelector('#native-original').href=nativeImage.src;
  document.querySelector('#native-counter').textContent=`${window.nativeScreens.indexOf(screen)+1} / ${window.nativeScreens.length} surfaces`;
 }
