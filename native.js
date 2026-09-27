@@ -19,7 +19,7 @@ function showNative(screen,variant=screen.variants[0][0]){
   ? `Capsule OS ${screen.title}: labeled comparison of deterministic renderer output and approved concept art. ${screen.fixture}`
   : `Capsule OS ${screen.title}: actual native renderer output. ${screen.fixture}`;
  document.querySelector('#native-evidence-kind').textContent=review?'LABELED RENDER / CONCEPT REVIEW':'ACTUAL APPLICATION DRAWING';
- document.querySelector('#native-evidence-note').textContent=review?'current source at left · art direction at right':'deterministic native source capture';
+ document.querySelector('#native-evidence-note').textContent=review?'current source at left · art direction at right':'native source render · isolated theme/material selection';
  document.querySelector('#native-original').href=nativeImage.src;
  document.querySelector('#native-counter').textContent=`${window.nativeScreens.indexOf(screen)+1} / ${window.nativeScreens.length} surfaces`;
 }

@@ -105,6 +105,19 @@ This is a powered-off, read-only installed-image verification. It proves the rec
 - Library: Coverwall and fullscreen-return behavior are covered by the native compositor/client tests; the public Coverwall image is a fictional-fixture source capture, not a VM guest frame.
 - Host gates reported 22,872 appearance checks and 33,605 action checks passing. These source/headless totals and compositor-client checks are not substitutes for refreshed VM visual or interaction acceptance.
 
+## S18 — Material World 08 installed-image receipt; visual approval pending
+
+- Exact final source: `c9a9888b435a7ffb751643debef80ad7022507e9`; installed-image stamp: `20260922-material-world-08`.
+- Read-only verifier: `F:/Development/Capsule OS/.codex-tmp/material-world-08-release/verify.log` recorded `PASS` after matching 403 exact installed files: 32 panel binaries, 2 window-manager binaries, 3 textures, 16 fonts, 16 aquarium assets, 51 icon-system files, 164 application icon-set files, 27 default-application-artwork files and 75 system-artwork files. It also recorded matching graphical Plymouth handoff and updater boot entries.
+- The verifier resolved 35 Capsule ELFs through both immutable A/B loader slots and found `capsule-peek`, `pdftoppm` and `ffmpeg` present.
+- Final source archive: `capsule-os-c9a9888b435a7ffb751643debef80ad7022507e9.tar.gz`, SHA-256 `ccaaae1182a3b76a070b1936cb13dff69eaceaab1009285471f0579eecda8447`.
+- `docs/ICON-FIDELITY-RECOVERY.md` at source commit `1f142255a8a944bc5d067efd212a00d2aa0c41fe` records the intended construction: rounded coated-graphite Cerakote with a clean default and optional gentle contact wear; a poured Jelly cushion with coloured transmission and embedded source artwork; and Paper preservation.
+- The document records 552,720 identical Paper application pixels and 364,480 identical Paper file/folder pixels when compared with release 07. This is a preservation comparison, not an approval of every material world.
+- Its Super Folder review documents 1, 2, 3, 4 and 5 preview slots at the 1, 4/8, 12/16, 24 and 32-item rungs, with artwork inside the carrier. Its recorded checks cover overlap, center hit/ownership, selection reveal, directional neighbor, held-pointer drag/drop highlight and Files text overlap.
+- Public source-review captures are copied from the native render outputs with their SHA-256 hashes in `NATIVE-CAPTURES.md`. They use deterministic sample content and source/headless Files output; they do not show a VMware guest.
+
+This is a powered-off, read-only installed-image verification. It proves the recorded source, files, build receipts, boot-entry record and A/B loader closure for the stamped image; it does not prove guest-session visual fidelity, pointer feel, hardware behavior, network reachability or general application compatibility. A current stylist review gives only conditional icon approval: the Cerakote whole-UI surface still does not meet the intended coated-metal appearance. A refreshed guest visual/interaction pass and whole-UI Cerakote approval remain pending. This section does not claim visual completion or final shell/chrome approval.
+
 ## S2 — Permissions
 
 - docs/manual/permissions.md: saved choices are used on the next launch.
