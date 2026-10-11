@@ -1,0 +1,787 @@
+{
+  "review_date": "2026-10-11",
+  "frozen_source": "321d317f2372a42be2ec09385fa421dc2d331bba",
+  "build_id": "202610111852",
+  "release_state": "ISO, signature and final copies verified; VM/SSD installs and actual boots pending",
+  "method": "Evidence coverage = completed gates / 4. Gates are equally weighted. This is not a percentage of compatible games/apps, a performance score, or an estimated completion date. Historical private evidence is dated; it is not retesting on the 0.6 installed image. No row has gate D yet. Coming soon means expected/catalogued, without an approved delivery date.",
+  "gates": {
+    "A": "Implemented Capsule execution route or runtime configuration",
+    "B": "Runtime actually executed/loaded in recorded testing for this row",
+    "C": "Representative content/application executed through Capsule in recorded testing",
+    "D": "Current 0.6 installed end-to-end workflow accepted on BOTH target machines"
+  },
+  "systems": [
+    {
+      "group": "Acorn",
+      "system": "BBC Micro",
+      "route": "RetroArch / b2",
+      "state": "Tested; inconclusive",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "BASIC boot observed, but the negative control also passes. Content acceptance remains inconclusive.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Apple",
+      "system": "Classic Macintosh (68k / Macintosh II)",
+      "route": "RetroArch / Mini vMac; persistent disk adapter",
+      "state": "Tested; runtime only",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "The unchanged Mini vMac core has recorded load/system-info evidence, plus native setup/adapter checks. A real System disk boot, save and relaunch remain unproven.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#candidate05-installed-filesystems",
+      "evidence_date": "2026-10-01",
+      "local_source_record": "docs/CANDIDATE05-COMPLETION-2026-10-01.md"
+    },
+    {
+      "group": "Apple",
+      "system": "Classic Macintosh (PowerPC)",
+      "route": "No qualified Capsule runtime",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Expected family; no implemented PowerPC execution route is established.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#classic-mac-and-macos",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "docs/BELLARD-COMPATIBILITY-CONTRACT-2026-09-30.md"
+    },
+    {
+      "group": "Apple",
+      "system": "macOS applications / Logic Pro",
+      "route": "Experimental Darling framework work",
+      "state": "Not working",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Foundation LOAD_OK and Unicode operations passed. File I/O/AppKit remain blocked; Logic has no application window or audio/project workflow. No Capsule adapter is accepted.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#classic-mac-and-macos",
+      "evidence_date": "2026-09-30",
+      "local_source_record": "docs/DOLEZEL-MACOS-CONTRACT-2026-09-30.md"
+    },
+    {
+      "group": "Atari",
+      "system": "Atari 2600",
+      "route": "RetroArch / stella",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Runtime definition exists; no qualified representative content run. Firmware is required where applicable.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Atari",
+      "system": "Atari ST",
+      "route": "RetroArch / hatari",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Runtime definition exists; no qualified representative content run. Firmware is required where applicable.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Atari",
+      "system": "Atari Lynx",
+      "route": "RetroArch / handy",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Runtime definition exists; no qualified representative content run. Firmware is required where applicable.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Atari",
+      "system": "Atari 7800",
+      "route": "RetroArch / prosystem",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Dig Dug: advancing captured frames. Historical private test; current 0.6 installed workflow pending.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Atari",
+      "system": "Atari Jaguar",
+      "route": "RetroArch / virtualjaguar",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Doom: captured execution and save files. Historical private test; current 0.6 installed workflow pending.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Commodore",
+      "system": "Commodore 64",
+      "route": "RetroArch / vice_x64",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "No qualified content run; Amiga also needs owner-supplied Kickstart.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Commodore",
+      "system": "Amiga",
+      "route": "RetroArch / puae",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "No qualified content run; Amiga also needs owner-supplied Kickstart.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Linux",
+      "system": "Native Linux applications",
+      "route": "deb-app / Capsule native desktop",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Selected native desktop products have actual loaders, finite initialization and private input/visual evidence. This does not certify every Linux package or device.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#candidate06-image-and-delivery",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "docs/CANDIDATE06-RELEASE-STATUS.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "MS-DOS",
+      "route": "DOSBox Staging",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Authored DOS input/save/restart/sibling-isolation fixture passed with a private software-renderer treatment. Commercial games and installed targets remain separate.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#dos-private-input-and-persistence",
+      "evidence_date": "2026-09-30",
+      "local_source_record": "docs/GILES-DOS-WAYLAND-CAPSULE-RUN-2026-09-30.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Windows 3.1",
+      "route": "DOSBox; private imported Windows tree",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Environment manager is implemented. Actual licensed Windows guest/application workflow is not established.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#windows-environment-mechanics",
+      "evidence_date": "2026-09-28",
+      "local_source_record": "docs/WINDOWS-ENVIRONMENTS.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Windows 95",
+      "route": "9x family catalog / no qualified edition baseline",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "The accepted 9x baseline is Windows 98 SE. Windows 95 has no edition-specific guest acceptance.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#windows-environment-mechanics",
+      "evidence_date": "2026-09-28",
+      "local_source_record": "docs/WINDOWS-ENVIRONMENTS.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Windows 98 SE",
+      "route": "QEMU TCG; sealed base + private overlay",
+      "state": "Tested; guest acceptance pending",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "Backend and authored BIOS guest tests cover overlay isolation, writes, locks and media. Licensed Windows boot, drivers, game auto-login and audio remain untested.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#windows-environment-mechanics",
+      "evidence_date": "2026-09-28",
+      "local_source_record": "docs/WINDOWS-ENVIRONMENTS.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Windows XP SP3 (32-bit)",
+      "route": "QEMU TCG; sealed base + private overlay",
+      "state": "Tested; guest acceptance pending",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "Backend and authored BIOS guest tests cover overlay isolation, writes, locks and media. Licensed Windows boot, drivers, game auto-login and audio remain untested.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#windows-environment-mechanics",
+      "evidence_date": "2026-09-28",
+      "local_source_record": "docs/WINDOWS-ENVIRONMENTS.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Windows applications (Wine)",
+      "route": "Wine 11.15 staging / Mono definitions",
+      "state": "Tested; application dependent",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "Bounded Wine/API evidence exists. Each app needs its own launch, editing/gameplay, save/reopen and device evidence. No universal Windows support claim.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#wine-and-microsoft-365",
+      "evidence_date": "2026-09-30",
+      "local_source_record": "docs/BELLARD-COMPATIBILITY-CONTRACT-2026-09-30.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Microsoft 365 (Word / Excel / PowerPoint)",
+      "route": "Wine / isolated Office lane",
+      "state": "Not working; stopped",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "The recorded DXGI GetSharedHandle E_NOTIMPL path blocks acceptance. No activation/edit/save/reopen workflow is accepted. Work remains stopped.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#wine-and-microsoft-365",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "docs/BELLARD-COMPATIBILITY-CONTRACT-2026-09-30.md"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Xbox",
+      "route": "xemu",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Pinned runtime/configuration exists; no accepted game workflow. Owner-supplied licensed content/firmware as required.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/xemu.json"
+    },
+    {
+      "group": "Microsoft",
+      "system": "Xbox 360",
+      "route": "xenia-canary",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Pinned runtime/configuration exists; no accepted game workflow. Owner-supplied licensed content/firmware as required.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/xenia-canary.json"
+    },
+    {
+      "group": "MSX",
+      "system": "MSX",
+      "route": "RetroArch / bluemsx",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative media and MSX system files; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "NEC",
+      "system": "PC Engine / TurboGrafx-16",
+      "route": "RetroArch / mednafen_pce",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative .pce content; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "NES",
+      "route": "RetroArch / nestopia, fceumm, quicknes",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Super Mario Bros. 3: advancing frames on three cores. Historical private tests.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Game Boy / Game Boy Color",
+      "route": "RetroArch / gambatte",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs a representative .gb/.gbc dump; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Super Nintendo",
+      "route": "RetroArch / snes9x",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Super Mario RPG: cartridge save produced; negative control failed.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Virtual Boy",
+      "route": "Catalogued; no implemented route",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Named in the shared system vocabulary; no qualified runtime or test evidence.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#expected-catalog",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "shared/system-order.h"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Nintendo 64",
+      "route": "RetroArch / mupen64plus_next",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Banjo-Kazooie: game-specific save produced. Historical private test.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Game Boy Advance",
+      "route": "RetroArch / mgba",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative .gba content; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "GameCube",
+      "route": "RetroArch / dolphin",
+      "state": "Tested; limited execution",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Game-specific health/safety screen and cache observed. The test did not progress into gameplay or establish input/audio.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Nintendo DS",
+      "route": "RetroArch / desmume, melonds",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative .nds content; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Wii",
+      "route": "RetroArch / dolphin",
+      "state": "Tested; not fully working",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Mario Kart Wii reaches its own wrist-strap screen and writes game state, then reports a Wii system-memory read/write error. Gameplay/save acceptance is incomplete.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Nintendo 3DS",
+      "route": "Catalogued; no implemented route",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Named in the shared system vocabulary; no qualified runtime or schedule.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#expected-catalog",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "shared/system-order.h"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Wii U",
+      "route": "Catalogued; no implemented route",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Named in the shared system vocabulary; no qualified runtime or schedule.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#expected-catalog",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "shared/system-order.h"
+    },
+    {
+      "group": "Nintendo",
+      "system": "Nintendo Switch",
+      "route": "Catalogued; no implemented route",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Named in the shared system vocabulary; no qualified runtime or schedule.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#expected-catalog",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "shared/system-order.h"
+    },
+    {
+      "group": "Sega",
+      "system": "SG-1000",
+      "route": "RetroArch / genesis_plus_gx",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Declared core family coverage; another Sega system passing does not qualify this system. No representative content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/libretro.json"
+    },
+    {
+      "group": "Sega",
+      "system": "Game Gear",
+      "route": "RetroArch / genesis_plus_gx",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Declared core family coverage; another Sega system passing does not qualify this system. No representative content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/libretro.json"
+    },
+    {
+      "group": "Sega",
+      "system": "Sega CD / Mega-CD",
+      "route": "RetroArch / genesis_plus_gx",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Declared core family coverage; another Sega system passing does not qualify this system. No representative content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/libretro.json"
+    },
+    {
+      "group": "Sega",
+      "system": "Sega 32X",
+      "route": "RetroArch / picodrive",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Declared core family coverage; another Sega system passing does not qualify this system. No representative content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/libretro.json"
+    },
+    {
+      "group": "Sega",
+      "system": "Master System",
+      "route": "RetroArch / picodrive",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "California Games: advancing captured frames. Historical private test.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Sega",
+      "system": "Mega Drive / Genesis",
+      "route": "RetroArch / genesis_plus_gx",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Road Rash 3: advancing captured frames. Historical private test.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Sega",
+      "system": "Saturn",
+      "route": "RetroArch / mednafen_saturn",
+      "state": "Tested; inconclusive",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "Real disc changes the images, but the BIOS negative control also passes. The recorded harness cannot qualify content execution.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Sega",
+      "system": "Dreamcast",
+      "route": "RetroArch / flycast",
+      "state": "Functional in private tests",
+      "gates": [
+        "A",
+        "B",
+        "C"
+      ],
+      "percent": 75,
+      "evidence": "Wacky Races: advancing captured frames; negative control mapped no window.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Sony",
+      "system": "PlayStation",
+      "route": "RetroArch / swanstation, pcsx_rearmed",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative PS1 disc/BIOS; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Sony",
+      "system": "PlayStation 2",
+      "route": "PCSX2",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Pinned runtime/configuration exists. No accepted title workflow; owner-supplied PS2 BIOS required.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/pcsx2.json"
+    },
+    {
+      "group": "Sony",
+      "system": "PSP",
+      "route": "RetroArch / ppsspp",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs representative ISO/CSO content; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "3DO",
+      "system": "3DO Interactive Multiplayer",
+      "route": "RetroArch / opera",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs a representative disc and owner-supplied BIOS; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Other",
+      "system": "Arcade",
+      "route": "RetroArch / FinalBurn Neo, MAME 2003-Plus",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Needs a matching representative ROM set; no qualified content run.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-09-03",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Other",
+      "system": "Adobe Flash",
+      "route": "Ruffle",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Runtime definition/configuration exists; no accepted owner-content SWF workflow.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/ruffle.json"
+    },
+    {
+      "group": "Other",
+      "system": "ScummVM games",
+      "route": "ScummVM 2026.3.0 / SDL",
+      "state": "Tested; runtime only",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "percent": 50,
+      "evidence": "Actual frontend loader/version and selected package closure passed. No game, save/relaunch, GPU or audio acceptance is inferred.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#candidate06-image-and-delivery",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "docs/CANDIDATE06-RELEASE-STATUS.md"
+    },
+    {
+      "group": "Acorn",
+      "system": "RISC OS",
+      "route": "No qualified Capsule runtime",
+      "state": "Coming soon; unscheduled",
+      "gates": [],
+      "percent": 0,
+      "evidence": "Expected future family; no Capsule runtime or representative workflow is established.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#historical-console-tests",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "docs/EMULATOR-PROOF.md"
+    },
+    {
+      "group": "Application runtimes",
+      "system": "Java applications",
+      "route": "java",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Included definition is a packaging/configuration starting point. This review found no qualifying current installed app workflow.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/java.json"
+    },
+    {
+      "group": "Application runtimes",
+      "system": "Interactive fiction",
+      "route": "gargoyle",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Included definition is a packaging/configuration starting point. This review found no qualifying current installed app workflow.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/gargoyle.json"
+    },
+    {
+      "group": "Application runtimes",
+      "system": "TeX / LaTeX tools",
+      "route": "texlive",
+      "state": "Implemented; untested",
+      "gates": [
+        "A"
+      ],
+      "percent": 25,
+      "evidence": "Included definition is a packaging/configuration starting point. This review found no qualifying current installed app workflow.",
+      "source": "https://github.com/JonAlexInc/capsule-os/blob/master/docs/SUPPORT-EVIDENCE.md#runtime-definition-state",
+      "evidence_date": "2026-10-11",
+      "local_source_record": "runtime-defs/texlive.json"
+    }
+  ]
+}

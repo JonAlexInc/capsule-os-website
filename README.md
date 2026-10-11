@@ -13,3 +13,7 @@ GitHub Pages publishes the main branch at its root. The .nojekyll file preserves
 ## Content
 
 See SOURCES.md and NATIVE-CAPTURES.md for provenance, fixtures, and limitations. Project code is GPL-3.0-or-later; see LICENSE.txt. No OS images, application payloads, firmware, game media, or third-party cover artwork are included.
+
+## Current support and release history
+
+[Expected system support and evidence coverage](support.html) was reviewed on October 11, 2026. [RC01–RC06 source change history](RC-CHANGE-HISTORY.md) gives exact revisions and counting rules. [Candidate06 status](CANDIDATE06-RELEASE-STATUS.md) keeps image delivery separate from pending installed/boot acceptance. Static publication files now additionally include support.html, support.css, support.js, support-data.json, rc-history.json, SUPPORT-STATUS.md, RC-CHANGE-HISTORY.md CANDIDATE06-RELEASE-STATUS.md and SUPPORT-EVIDENCE.md. No private evidence, payloads, media or keys are published.
